@@ -1,0 +1,99 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.weekdayBlock,
+.calendarBlock {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendarBlock {
+  height: 84vh;
+  grid-auto-rows: minmax(auto, 16.8vh);
+}
+
+.weekdayName,
+.day {
+  margin: 4px;
+  padding: 8px;
+  border: 1px solid #dadce0;
+  color: #70757a;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.day.emptyDay {
+  border: none;
+}
+
+.calendarHeaderBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.monthNameYearText {
+  color: #3c4043;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.addSymbol {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  border: 1px solid #cbd4c2;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 16px;
+  color: #cbd4c2;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#newEventModal,
+#deleteEventModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #e8f4fa;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+}
+
+.eventChip {
+  color: white;
+  background: skyblue;
+  border-radius: 8px;
+  text-transform: capitalize;
+  margin: 2px 0;
+  cursor: pointer;
+}
